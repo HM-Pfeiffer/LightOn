@@ -11,6 +11,7 @@ function App() {
           <li>
             <Link className={"App-link"} to='/'>Home</ Link>
           </li>
+          <li> </li>
           <li>
             <Link className={"App-link"} to='/library'>Library</Link>
           </li>

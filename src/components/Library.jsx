@@ -14,16 +14,22 @@ export default function Library() {
 
     return (
         <div>
-            <h1>Library</h1>
+            <h1>Home Library</h1>
             <ul>
                 { books.map((book, index) => (
-                    <li key={index} style={{paddingBottom: '25px'}}>
-                        <div>{book.name}</div>
+                    <content>
+                    <li key={index} style={{margin: '5px', paddingBottom: '25px', fontFamily: '-moz-initial', fontSize: 30}}>
+                        <div> <strong  style={{fontFamily: 'monospace', color: 'purple'}}>{book.name}</strong></div>
                         <div>{book.author}</div>
                         <div>{book.year_published}</div>
                     </li>
+                    </content>
                 ))}
             </ul>
+            <footer>
+                <input style={{margin: '30px'}}></input>
+                <button>Check Library Updates</button>
+                </footer>
         </div>
     )
 }

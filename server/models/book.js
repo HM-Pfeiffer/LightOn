@@ -1,3 +1,7 @@
+//        !!! DEFINING SCHEMAS !!!
+//MY NOTE: rules by which new attributes need to abide by
+
+
 'use strict';
 
 const { Model } = require('sequelize');
@@ -30,6 +34,10 @@ module.exports = (sequelize, DataTypes) => {
     year_published: {
       type: DataTypes.SMALLINT,
       allowNull: false,
+    },
+    description: {
+      type: DataTypes.STRING,
+      allowNull: true,
     }
   }, {
     sequelize,

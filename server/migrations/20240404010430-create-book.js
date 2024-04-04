@@ -1,3 +1,6 @@
+//        !!! SCHEMA Check before migration to DB !!!
+//MY NOTE: essentially migrations in Sequelize checking schemas, using async to migrate data to DB
+
 'use strict';
 // /** @type {import('sequelize-cli').Migration} */
 module.exports = {
@@ -27,6 +30,10 @@ module.exports = {
         type: Sequelize.SMALLINT,
         allowNull: false
       },
+      description: {
+        type: Sequelize.STRING,
+        allowNull: true
+      }
       // createdAt: {
       //   allowNull: false,          //don't need these since we turned off timestamps: false
       //   type: Sequelize.DATE

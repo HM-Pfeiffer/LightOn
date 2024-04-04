@@ -9,10 +9,10 @@ function App() {
       <header>
         <ul>
           <li>
-            <Link to='/'>Home</ Link>
+            <Link className={"App-link"} to='/'>Home</ Link>
           </li>
           <li>
-            <Link to='/library'>Library</Link>
+            <Link className={"App-link"} to='/library'>Library</Link>
           </li>
         </ul>
       </header>

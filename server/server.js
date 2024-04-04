@@ -13,13 +13,16 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false })); //check
 
-// app.use(express.static(__dirname + '/html/'));
+app.use(express.static(path.join(__dirname, '../build')));
 
 //require controllers 
 const booksController = require('./controllers/books_controller'); 
 
 app.use('/api/books', booksController); // NOTE: important to add /api before books bc eventually this express server will host our server and better to prepend
 
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, '../build/index.html'))
+})
 // // catch-all route handler for any requests to an unknown route
 // app.use((req, res) => res.status(404).send('This is not the page you\'re looking for...'));
 

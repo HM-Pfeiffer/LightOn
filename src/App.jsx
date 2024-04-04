@@ -7,15 +7,8 @@ function App() {
     <div className="App">
       <Router>
       <header>
-        <ul>
-          <li>
-            <Link className={"App-link"} to='/'>Home</ Link>
-          </li>
-          <li> </li>
-          <li>
-            <Link className={"App-link"} to='/library'>Library</Link>
-          </li>
-        </ul>
+            <div> <Link className={"App-link"} style={{margin: '40%', paddingBottom: '25px'}} to='/'>Home</ Link>  </div>
+            <div> <Link className={"App-link"} style={{margin: '40%'}} to='/library'>Library</Link>  </div>
       </header>
       <main>
         <Routes>

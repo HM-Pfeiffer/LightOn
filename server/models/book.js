@@ -29,11 +29,11 @@ module.exports = (sequelize, DataTypes) => {
     },
     author: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     year_published: {
       type: DataTypes.SMALLINT,
-      allowNull: false,
+      allowNull: true,
     },
     description: {
       type: DataTypes.STRING,

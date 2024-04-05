@@ -24,11 +24,11 @@ module.exports = {
       },
       author: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: true
       },
       year_published: {
         type: Sequelize.SMALLINT,
-        allowNull: false
+        allowNull: true
       },
       description: {
         type: Sequelize.STRING,

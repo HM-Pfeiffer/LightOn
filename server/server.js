@@ -4,7 +4,7 @@ const app = express();
 const { Sequelize } = require('sequelize');
 const path = require('path');
 const cors = require('cors');
-const PORT = 4005; 
+const PORT = 3001; 
 
 //configure / middleware
 require('dotenv').config();

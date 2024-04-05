@@ -1,4 +1,3 @@
-import { hasFormSubmit } from '@testing-library/user-event/dist/utils';
 import { useState, useEffect } from 'react'; 
 
 export default function Library() {
@@ -6,7 +5,7 @@ export default function Library() {
 
     useEffect(() => {
         const fetchData = async () => {
-            const response = await fetch('http://localhost:4005/api/books/');
+            const response = await fetch('http://localhost:3001/api/books/');
             const json = await response.json();
             setBooks(json); 
             console.log(books)
@@ -14,8 +13,24 @@ export default function Library() {
         fetchData(); 
     },[]); 
 
+    const textbox = document.getElementById('textbox').value; 
+    const bookName = document.getElementById('book-name').value; 
+    const author = document.getElementById('author').value; 
+    const yearPublished = document.getElementById('year-published').value; 
+    const bookDescription = document.getElementById('book-description').value; 
+    const button = document.getElementById('button1').value; 
+
+    // const dispatch = useDispatch(); 
+
+    const handleFunction = () => {
+      bookName.innerHTML = textbox.value; 
+    };
+
+    button.addEventListener('click', handleFunction)
+
     return (
         <div style={{color: 'blueviolet'}}>
+            <textbox id='textbox' style={{width:'4px'}}> </textbox> 
             <h1 style={{margin: '30px'}}>Home Library</h1>
             <ul>
                 { books.map((book, index) => (
@@ -26,11 +41,6 @@ export default function Library() {
                     </li>
                 ))}
             </ul>
-            <footer>
-                <div style={{margin: '20px', color: 'black', fontSize: '25px', fontFamily: 'monospace'}}>Would you like to add a book?</div>
-                <input id='book-input' style={{margin: '30px', borderColor:'purple', height: '25px', width: '900px'}}></input>
-                <button><strong style={{color: "maroon", padding: '35px'}}>Book Name</strong></button>
-            </footer>
         </div>
     )
 }
